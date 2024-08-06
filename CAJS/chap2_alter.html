@@ -16,17 +16,29 @@
 <body>
     
     <div id="alert" class="alert-box">
-        알림창
+        <p id="msg">알림창 </p>     
+        <button id="close">닫기</button>
     </div>
     <button onclick="btn1()">열기</button> <br>
-    <button onclick="btn2()">닫기</button>
+    <button onclick="btn3()">열기2</button> <br>
+    
     <script>
+        
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = ""
+            console.log('클릭');
+        })
         function btn1(){
             document.getElementById('alert').style.display = "block"
+            document.getElementById('msg').innerHTML = "안녕하셍"
+           
         }
-        function btn2(){
-            document.getElementById('alert').style.display = "none"
+        function btn3(){
+            document.getElementById('alert').style.display = "block"
+            document.getElementById('msg').innerHTML = "잘가샏ㅇ"
         }
+        
+        
     </script>
 </body>
 </html>
